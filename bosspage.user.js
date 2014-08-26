@@ -9,6 +9,7 @@
 function boss() {
 
     var headbar = document.createElement("div");
+    headbar.id = "boss-head";
     headbar.style.backgroundImage = "url(https://cloud.githubusercontent.com/assets/1318371/4039966/16a49d44-2cd8-11e4-9863-60c6097bf062.png)";
     headbar.style.width = "1587px";
     headbar.style.height = "140px";
@@ -43,7 +44,7 @@ function boss() {
     
     var all = document.querySelectorAll("body > *");
     for (var i = 0; i < all.length; i++) {
-        if (all[i].id !== "headbar") {
+        if (all[i].id !== "boss-head") {
         	content.appendChild(all[i]);
         }
     }
