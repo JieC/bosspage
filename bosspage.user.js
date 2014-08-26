@@ -14,6 +14,7 @@ function boss() {
     headbar.style.height = "140px";
     headbar.style.position = "fixed";
     headbar.style.top = "0px";
+    headbar.style.left = "0px";
     headbar.style.zIndex = 9999;
     
     document.body.appendChild(headbar);
