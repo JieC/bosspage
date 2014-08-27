@@ -94,6 +94,11 @@ function toggleColor() {
   }
 }
 
+//don't run on frames or iframes
+if (window.top != window.self) {
+  return;
+}
+
 var togglerBoss = document.createElement("div");
 togglerBoss.id = "bosstoggle";
 togglerBoss.style.width = "20px";
