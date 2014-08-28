@@ -42,6 +42,7 @@ function boss() {
   wrapper.style.minWidth = "960px";
   wrapper.style.overflow = "hidden";
   wrapper.style.webkitFilter = "grayscale(1)";
+  wrapper.style.filter = "grayscale(1)";
 
   var content = document.createElement("div");
   content.id = "bosscontent";
