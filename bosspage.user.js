@@ -90,8 +90,10 @@ function toggleColor() {
   var wrapper = document.querySelector("#bosswrapper");
   if (wrapper.style.webkitFilter === "") {
     wrapper.style.webkitFilter = "grayscale(1)";
+    wrapper.style.filter = "grayscale(1)";
   } else {
     wrapper.style.webkitFilter = "";
+    wrapper.style.filter = "";
   }
 }
 
