@@ -1,5 +1,7 @@
 bosspage
 ========
+Chrome 21+
+Firefox 35+
 
 Use at your own risk!
 - Click top-left corner (Word icon) to toggle boss page.
