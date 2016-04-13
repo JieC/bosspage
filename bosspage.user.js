@@ -44,6 +44,7 @@ function boss() {
   wrapper.style.minWidth = "960px";
   wrapper.style.overflow = "hidden";
   wrapper.style.webkitFilter = "grayscale(1)";
+  wrapper.style.filter = "grayscale(1)";
   wrapper.style.border = "1px solid #C6C6C6";
 
   var content = document.createElement("div");
@@ -87,8 +88,10 @@ function toggleColor() {
   var wrapper = document.querySelector("#bosswrapper");
   if (wrapper.style.webkitFilter === "") {
     wrapper.style.webkitFilter = "grayscale(1)";
+    wrapper.style.filter = "grayscale(1)";
   } else {
     wrapper.style.webkitFilter = "";
+    wrapper.style.filter = "";
   }
 }
 
