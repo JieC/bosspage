@@ -1,14 +1,15 @@
 // ==UserScript==
 // @name         BossPage
 // @namespace    http://jiec.github.io/
-// @version      1.2
+// @version      1.3
 // @description  Boss Page for all
 // @include      *
 // ==/UserScript==
 
 function boss() {
-  document.body.style.background = "#ccd0d5";
+  document.body.style.background = "#FCFCFC";
 
+  var dpi = 1.25;
   var headbar = document.createElement("div");
   headbar.id = "bosshead";
   headbar.style.position = "fixed";
@@ -17,12 +18,13 @@ function boss() {
   headbar.style.zIndex = 9999;
 
   var headImg = new Image();
-  headImg.src = "https://cloud.githubusercontent.com/assets/1318371/4039966/16a49d44-2cd8-11e4-9863-60c6097bf062.png";
+  headImg.src = "https://cloud.githubusercontent.com/assets/1318371/14483673/ff0984a4-017b-11e6-97e0-e4088f515e01.png";
   headImg.onload = function () {
     var headbar = document.querySelector("#bosshead");
     headbar.style.backgroundImage = "url(" + headImg.src + ")";
-    headbar.style.width = headImg.naturalWidth + "px";
-    headbar.style.height = headImg.naturalHeight + "px";
+    headbar.style.backgroundSize = "contain";
+    headbar.style.width = headImg.naturalWidth / dpi + "px";
+    headbar.style.height = headImg.naturalHeight / dpi + "px";
   };
 
   var togglerColor = document.createElement("div");
@@ -37,25 +39,20 @@ function boss() {
 
   var wrapper = document.createElement("div");
   wrapper.id = "bosswrapper";
-  wrapper.style.margin = "0 auto";
+  wrapper.style.margin = "160px auto 25px";
   wrapper.style.maxWidth = "85%";
   wrapper.style.minWidth = "960px";
   wrapper.style.overflow = "hidden";
   wrapper.style.webkitFilter = "grayscale(1)";
-  wrapper.style.filter = "grayscale(1)";
+  wrapper.style.border = "1px solid #C6C6C6";
 
   var content = document.createElement("div");
   content.id = "bosscontent";
-  content.style.display = "block";
-  content.style.float = "left";
-  content.style.padding = "100px";
-  content.style.marginTop = "200px";
-  content.style.marginLeft = "10px";
-  content.style.marginBottom = "60px";
-  content.style.width = "100%";
-  content.style.border = "1px solid #a9b0b8";
+  content.style.padding = "100px 0";
+  content.style.margin = "0 auto";
+  content.style.width = "85%";
   content.style.backgroundColor = "#ffffff";
-  content.style.boxShadow = "0 0 2em rgba(0, 0, 0, 0.2)";
+  //content.style.boxShadow = "0 0 2em rgba(0, 0, 0, 0.2)";
   wrapper.appendChild(content);
 
   var all = document.querySelectorAll("body > *");
@@ -90,10 +87,8 @@ function toggleColor() {
   var wrapper = document.querySelector("#bosswrapper");
   if (wrapper.style.webkitFilter === "") {
     wrapper.style.webkitFilter = "grayscale(1)";
-    wrapper.style.filter = "grayscale(1)";
   } else {
     wrapper.style.webkitFilter = "";
-    wrapper.style.filter = "";
   }
 }
 
